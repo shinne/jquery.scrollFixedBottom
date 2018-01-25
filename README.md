@@ -23,6 +23,13 @@ jquery.js
 ~~~javascript
     new ScrollFixedBottom();
 ~~~
+##配置参数
+  ####options
+  字段 | 类型 | 默认值 | 说明
+  scrollWrapEle | String | ".scroll-wrap" | 具有横向滚动条的外层包裹器
+  scrollItemEle | String | ".scroll-item" | 需要被横向滚动的真正元素
+  left | Number | 0 | 初始化时需要横向滚动的左偏移量
+
 
 
 
