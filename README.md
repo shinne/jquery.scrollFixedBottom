@@ -21,7 +21,7 @@ jquery.js
 ~~~
 * 初始化该插件:
 ~~~javascript
-    new ScrollFixed();
+    new ScrollFixedBottom();
 ~~~
 
 

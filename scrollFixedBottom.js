@@ -1,12 +1,7 @@
-/**
- * 1、思考show与visibility的区别
- * 2、判断createVirtual是否需要创建，如果存在则更新其样式，否则创建
- * 3、virtualScrollItem的left由其相对于scrollWrap的left确定
- * 4、局限性，样式上的局限性，scrollWrap目前只能被scrollItem撑开
- * 5、元素为jquery，默认加$
- * 6、width -> outerWidth
+/*!
+ * scrollFixedBottom - A Lightweight jQuery Plugin v0.0.1
+ * https://github.com/shinne/jquery.scrollFixedBottom
  */
-
 /**
  *
  * @param options:
