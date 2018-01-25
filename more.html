@@ -397,7 +397,10 @@
                 url: "fragment1.html",
                 success: function(data){
                     $(".search-content").html(data);
-                    scrollObj.refresh();
+                    scrollObj.refresh({
+                        scrollWrapEle:"#scrollWrap",
+                        scrollItemEle:"#scrollItem",
+                    });
                 }
             });
 
