@@ -30,7 +30,7 @@ function ScrollFixedBottom(options) {
 }
 
 ScrollFixedBottom.prototype = {
-    constructor: ScrollFixed,
+    constructor: ScrollFixedBottom,
     defaultCfg: {
         scrollWrapEle: ".scroll-wrap",
         scrollItemEle: ".scroll-item",

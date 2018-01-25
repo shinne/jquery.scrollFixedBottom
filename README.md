@@ -6,7 +6,7 @@
 页面内容的横向滚动条一直出现在用户可操作范围内，提升用户体验。
 
 ## 快速体验
-https://shinne.github.io/jquery.scrollBottom/index.html
+https://shinne.github.io/jquery.scrollFixedBottom/index.html
 
 ## 外部依赖
 jquery.js
