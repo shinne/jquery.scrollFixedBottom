@@ -15,9 +15,11 @@ jquery.js
     <div class="scroll-wrap" style="overflow-x:scroll;width:800px;">
         <div class="scroll-item" style="width:3000px;height:3000px;"></div>
     </div>
+~~~
 * 初始化该插件，如下：
 ~~~javascript
     var scrollFixed = new ScrollFixed();
+~~~
 
 
 
