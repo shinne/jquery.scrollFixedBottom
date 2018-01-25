@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery.js"></script>
+    <script src="scrollFixedBottom.js"></script>
+</head>
+<body>
+    <div class="search-panel">
+        <button class="triggerButton1" style="position:absolute;margin:0 auto;left:0;height: 100px;width: 200px;">点击我异步加载新数据1，没有滚动条的时候，并refresh组件</button>
+        <button class="triggerButton2" style="position:absolute;margin:0 auto;left:400px;height: 100px;width: 200px;">点击我异步加载新数据2，wrap和table都有左偏移时的效果，并refresh组件</button>
+        <div class="search-content" style="padding-top: 120px;">
+            <div class="test-wrap" style="overflow-y:visible;overflow-x:scroll; min-height:200px;margin-top: 10px;" id="tableWrap">
+                <table class="test-table">
+                    <thead style="background: #efefef;">
+                    <tr>
+                        <th style="min-width:295px">列11111111</th>
+                        <th style="min-width:295px">列2222222222</th>
+                        <th style="min-width:275px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:295px">列5555555555</th>
+                        <th style="min-width:275px">列66666666666</th>
+                        <th style="min-width:275px">列777777777777777</th>
+                        <th style="min-width:275px">列8888888888</th>
+                        <th style="min-width:205px">列99999999999</th>
+                    </tr>
+                    </thead>
+                    <tbody class="">
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                    <tr>
+                        <th style="min-width:95px">列11111111</th>
+                        <th style="min-width:95px">列2222222222</th>
+                        <th style="min-width:75px">列3333333
+                        <th style="min-width:195px">列44444444</th>
+                        <th style="min-width:95px">列5555555555</th>
+                        <th style="min-width:75px">列66666666666</th>
+                        <th style="min-width:75px">列777777777777777</th>
+                        <th style="min-width:75px">列8888888888</th>
+                        <th style="min-width:105px">列99999999999</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        var scrollFixedBottom = new ScrollFixedBottom({
+            scrollWrapEle:".test-wrap",
+            scrollItemEle:".test-table",
+            left:300
+        });
+        $(".triggerButton1").on("click",function(){
+            $.ajax({
+                type: "get",
+                url: "fragment1.html",
+                success: function(data){
+                    $(".search-content").html(data);
+                    scrollFixedBottom.refresh();
+                }
+            });
+        });
+        $(".triggerButton2").on("click",function(){
+            $.ajax({
+                type: "get",
+                url: "fragment2.html",
+                success: function(data){
+                    $(".search-content").html(data);
+                    scrollFixedBottom.refresh({
+                        left:0
+                    });
+                }
+            });
+        });
+
+    });
+</script>
+</html>
