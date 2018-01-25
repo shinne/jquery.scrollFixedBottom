@@ -1,4 +1,4 @@
-# jquery.scrollBottom
+# jquery.scrollFixedBottom
 ## 问题描述
 当页面内容有横向滚动条，同时数据很长使得横向拖动滚动条的时候需要将页面滑动至滚动条出现的地方，用户体验不好，因此写此小插件解决该问题。
 
