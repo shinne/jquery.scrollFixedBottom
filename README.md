@@ -12,7 +12,12 @@ jquery.js
 * 引入jquery.js和scrollFixed.js
 * 可能出现横向滚动条的div.scroll-wrap及宽度很宽的内容div.scroll-item如下：
 ~~~html
-    <div class="scroll-wrap" style="overflow-x:scroll;width:800px;"><div class="scroll-item" style="width:3000px;height:3000px;"></div></div>
+    <div class="scroll-wrap" style="overflow-x:scroll;width:800px;">
+        <div class="scroll-item" style="width:3000px;height:3000px;"></div>
+    </div>
+* 初始化该插件，如下：
+~~~javascript
+    var scrollFixed = new ScrollFixed();
 
 
 
