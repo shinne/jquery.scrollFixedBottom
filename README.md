@@ -12,7 +12,7 @@ https://shinne.github.io/jquery.scrollFixedBottom/index.html
 jquery.js
 
 ## 快速上手
-* 引入jquery.js和scrollFixed.js
+* 引入jquery.js和scrollFixedBottom.js
 * 可能出现横向滚动条的div.scroll-wrap及宽度很宽的内容div.scroll-item:
 ~~~html
     <div class="scroll-wrap" style="overflow-x:scroll;width:800px;">
